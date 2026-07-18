@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A fast, checklist-first Path of Exile 2 campaign guide for patch 0.5." />
+    <title>Wayfinder — PoE 2 Campaign Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__glow"></div>
+      <nav class="nav wrap" aria-label="Primary navigation">
+        <a class="brand" href="#top">WAYFINDER <span>POE 2</span></a>
+        <div class="nav__links">
+          <a href="#guide">Guide</a>
+          <a href="#rewards">Rewards</a>
+          <a href="#notes">Notes</a>
+        </div>
+      </nav>
+      <div class="wrap hero__content" id="top">
+        <p class="eyebrow">PATCH 0.5 • CAMPAIGN CHECKLIST</p>
+        <h1>Reach the Atlas.<br /><em>Leave nothing behind.</em></h1>
+        <p class="hero__lede">A no-nonsense Path of Exile 2 campaign companion. Follow the story, collect every permanent bonus, and keep your progress between sessions.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#guide">Start the campaign <span>↓</span></a>
+          <button class="button button--quiet" id="reset-progress" type="button">Reset checklist</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="overview wrap" aria-label="Campaign progress">
+        <div class="progress-card">
+          <div>
+            <p class="eyebrow">YOUR PROGRESS</p>
+            <p class="progress-card__number"><span id="completed-count">0</span><small> / <span id="total-count">0</span> bonuses</small></p>
+          </div>
+          <div class="progress-track" aria-hidden="true"><div id="progress-bar"></div></div>
+          <p class="progress-card__hint" id="progress-label">Start with Act 1.</p>
+        </div>
+        <div class="overview__stats">
+          <div><strong>24</strong><span>Weapon set points</span></div>
+          <div><strong>100</strong><span>Base Spirit</span></div>
+          <div><strong>4</strong><span>Campaign chapters</span></div>
+        </div>
+      </section>
+
+      <section class="guide wrap" id="guide">
+        <div class="section-heading">
+          <div><p class="eyebrow">THE ROUTE</p><h2>Campaign at a glance</h2></div>
+          <p>Use this as your second-screen checklist. The main route gets you through; gold-marked entries are permanent character power.</p>
+        </div>
+        <div class="route-grid" id="route-grid"></div>
+      </section>
+
+      <section class="rewards" id="rewards">
+        <div class="wrap">
+          <div class="section-heading section-heading--light">
+            <div><p class="eyebrow">DON'T MISS THESE</p><h2>Permanent reward tracker</h2></div>
+            <p>Rewards and locations reflect PoE 2 patch 0.5. Choice bonuses are permanent unless the game explicitly says otherwise.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter rewards">
+            <button class="filter is-active" data-filter="all" type="button">All rewards</button>
+            <button class="filter" data-filter="points" type="button">Skill points</button>
+            <button class="filter" data-filter="stats" type="button">Stats &amp; defences</button>
+            <button class="filter" data-filter="choice" type="button">Choices</button>
+          </div>
+          <div id="reward-list" class="reward-list"></div>
+        </div>
+      </section>
+
+      <section class="notes wrap" id="notes">
+        <div>
+          <p class="eyebrow">HOW TO USE THIS</p>
+          <h2>Fast is good.<br />Permanent power is better.</h2>
+        </div>
+        <div class="notes__content">
+          <p>Click a card once you have claimed its reward. Your checklist lives in this browser, so it stays with you even after a refresh.</p>
+          <p><strong>Weapon Set Passive Skill Points</strong> can be allocated separately for each weapon set. They are not extra ordinary passive points, but they are easy to miss and worth claiming.</p>
+          <p>Act 4 island order can vary. This guide lists reward objectives rather than forcing a fixed island sequence.</p>
+          <p class="source">Data cross-checked against the community-maintained <a href="https://www.poe2wiki.net/wiki/List_of_quest_rewards" target="_blank" rel="noreferrer">PoE 2 Wiki reward list</a>. Always check patch notes after a major update.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer><div class="wrap"><span>WAYFINDER — an unofficial Path of Exile 2 guide</span><span>Made for patch 0.5</span></div></footer>
+    <script src="app.js"></script>
+  </body>
+</html>
