@@ -2,6 +2,10 @@
 
 An original, static, browser-based campaign checklist for Path of Exile 2 patch 0.5. It lists every campaign permanent reward through Act 4 and the Interludes, with local checklist persistence and filters.
 
+## Live site
+
+https://arcanehunter.github.io/poe2-leveling-guide/
+
 ## Run locally
 
 Open `index.html` in a browser, or serve this folder with any static-file server.
@@ -12,4 +16,4 @@ The included workflow publishes the site whenever changes land on `main`. In the
 
 ## Data note
 
-Reward data was cross-checked against the [PoE 2 Wiki quest reward list](https://www.poe2wiki.net/wiki/List_of_quest_rewards) for patch 0.5. Confirm details against the latest patch notes after a game update.
+Reward data was cross-checked against the [PoE 2 Wiki Acts quick guide — Permanent Boosts](https://www.poe2wiki.net/wiki/Guide%3AActs_quick_guide#Passive_Boosts) for patch 0.5. Confirm details against the latest patch notes after a game update.
