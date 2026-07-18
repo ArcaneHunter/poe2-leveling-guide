@@ -12,3 +12,10 @@ editorList.addEventListener('dragend',event=>{event.target.closest('.editor-row'
 editorList.addEventListener('dragover',event=>{const row=event.target.closest('.editor-row');if(!row||row.dataset.id===draggedId)return;event.preventDefault();row.classList.add('drag-over');event.dataTransfer.dropEffect='move';});
 editorList.addEventListener('dragleave',event=>event.target.closest('.editor-row')?.classList.remove('drag-over'));
 editorList.addEventListener('drop',event=>{const target=event.target.closest('.editor-row');if(!target||!draggedId||target.dataset.id===draggedId)return;event.preventDefault();const from=route.findIndex(step=>step.id===draggedId),to=route.findIndex(step=>step.id===target.dataset.id);route.splice(to,0,route.splice(from,1)[0]);saveRoute();renderRoute();renderEditor();});
+
+// Keep choice descriptions concise; the badge communicates whether a choice can be changed.
+for(const step of route)step.bonus=step.bonus.replace(/ \(changeable\)| \(permanent choice — cannot be changed\)| \(permanent choices — cannot be changed\)/g,'');
+saveRoute();
+function refreshChoiceBadges(){if(filter!=='permanent')return;for(const card of document.querySelectorAll('.reward')){const step=route.find(item=>item.id===card.dataset.id);if(step?.type==='choice'&&['Valley of the Titans','Abandoned Prison','Qimah'].includes(step.area))card.querySelector('.tag').textContent='Changeable';}}
+document.querySelectorAll('[data-filter]').forEach(button=>button.addEventListener('click',refreshChoiceBadges));
+renderRoute();refreshChoiceBadges();
